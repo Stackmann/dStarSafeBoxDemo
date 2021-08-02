@@ -5,6 +5,6 @@
 //  Created by admin on 01.08.2021.
 //
 
-protocol Coordinator {
+protocol Coordinator: class {
     func start()
 }
