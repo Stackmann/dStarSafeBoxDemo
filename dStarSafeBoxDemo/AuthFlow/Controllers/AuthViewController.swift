@@ -14,8 +14,7 @@ class AuthViewController: UIViewController, AuthView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func acceptButtonTaped(_ sender: UIButton) { onCompleteAuth?() }
 }

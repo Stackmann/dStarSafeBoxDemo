@@ -32,14 +32,14 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
     //MARK: - Run current flow's controllers
     
     private func showAuthView() {
-        var loginOutput = factory.makeAuthView()
-        loginOutput.onCompleteAuth = { [weak self] in
+        var authView = factory.makeAuthView()
+        authView.onCompleteAuth = { [weak self] in
             self?.finishFlow?()
         }
-        loginOutput.onRestorePasswordButtonTap = { [weak self] in
+        authView.onRestorePasswordButtonTap = { [weak self] in
             self?.showRestoreView()
         }
-        router.setRootModule(loginOutput)
+        router.setRootModule(authView) // !!! reconsiderate
     }
     
     private func showSignUpView() {
@@ -72,6 +72,6 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
 //    }
     
     private func isItFirstAuth() -> Bool {
-        return true
+        return false
     }
 }

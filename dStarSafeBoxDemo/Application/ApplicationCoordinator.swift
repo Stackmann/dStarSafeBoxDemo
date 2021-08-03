@@ -17,8 +17,9 @@ fileprivate enum LaunchInstructor {
     
     switch (tutorialWasShown, isAutorized) {
       case (true, false), (false, false): return .auth
-      case (false, true): return .onboarding
-      case (true, true): return .main
+    default: return .main
+//      case (false, true): return .onboarding
+//      case (true, true): return .main
     }
   }
 }
@@ -68,10 +69,15 @@ final class ApplicationCoordinator: BaseCoordinator {
 //    coordinator.start()
   }
   
-  private func runMainFlow() {
-//    let (coordinator, module) = coordinatorFactory.makeTabbarCoordinator()
-//    addDependency(coordinator)
-//    router.setRootModule(module, hideBar: true)
-//    coordinator.start()
-  }
+    private func runMainFlow() {
+        let coordinator = coordinatorFactory.makeHomeCoordinator(router: router)
+        coordinator.openActivityFlow = { [weak self, weak coordinator] in
+            isAutorized = false
+            self?.start() //!!! RECONSIDERATE
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+
 }

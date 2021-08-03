@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8403EB2026B6A70C00D11783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403EB1F26B6A70C00D11783 /* AppDelegate.swift */; };
 		8403EB2226B6A70C00D11783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403EB2126B6A70C00D11783 /* SceneDelegate.swift */; };
-		8403EB2426B6A70C00D11783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403EB2326B6A70C00D11783 /* ViewController.swift */; };
 		8403EB2726B6A70C00D11783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8403EB2526B6A70C00D11783 /* Main.storyboard */; };
 		8403EB2A26B6A70C00D11783 /* dStarSafeBoxDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8403EB2826B6A70C00D11783 /* dStarSafeBoxDemo.xcdatamodeld */; };
 		8403EB2C26B6A70C00D11783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8403EB2B26B6A70C00D11783 /* Assets.xcassets */; };
@@ -25,6 +24,13 @@
 		84391A6626B7479200BACB56 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6526B7479200BACB56 /* NSObjectExtensions.swift */; };
 		84391A6A26B7487900BACB56 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6926B7487900BACB56 /* ApplicationCoordinator.swift */; };
 		84391A6E26B748DC00BACB56 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6D26B748DC00BACB56 /* BaseCoordinator.swift */; };
+		846E87FC26B95A8900F591EA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E87FB26B95A8900F591EA /* Home.storyboard */; };
+		846E880226B95B6A00F591EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880126B95B6A00F591EA /* HomeViewController.swift */; };
+		846E880526B95BF300F591EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880426B95BF300F591EA /* HomeView.swift */; };
+		846E880926B96FEF00F591EA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880826B96FEF00F591EA /* CategoriesCollectionViewCell.swift */; };
+		846E880C26B981F400F591EA /* HomeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880B26B981F400F591EA /* HomeModuleFactory.swift */; };
+		846E880F26B9890500F591EA /* HomeCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880E26B9890500F591EA /* HomeCoordinatorOutput.swift */; };
+		846E881226B989B200F591EA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E881126B989B200F591EA /* HomeCoordinator.swift */; };
 		84B7A20826B82C9700DDEC63 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7A20726B82C9700DDEC63 /* Auth.storyboard */; };
 		84B7A20C26B82D3B00DDEC63 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7A20B26B82D3B00DDEC63 /* AuthViewController.swift */; };
 		84B7A20F26B8312500DDEC63 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7A20E26B8312500DDEC63 /* AuthCoordinator.swift */; };
@@ -41,7 +47,6 @@
 		8403EB1C26B6A70C00D11783 /* dStarSafeBoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dStarSafeBoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8403EB1F26B6A70C00D11783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8403EB2126B6A70C00D11783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8403EB2326B6A70C00D11783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8403EB2626B6A70C00D11783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8403EB2926B6A70C00D11783 /* dStarSafeBoxDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dStarSafeBoxDemo.xcdatamodel; sourceTree = "<group>"; };
 		8403EB2B26B6A70C00D11783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +63,13 @@
 		84391A6526B7479200BACB56 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		84391A6926B7487900BACB56 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		84391A6D26B748DC00BACB56 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		846E87FB26B95A8900F591EA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		846E880126B95B6A00F591EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		846E880426B95BF300F591EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		846E880826B96FEF00F591EA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		846E880B26B981F400F591EA /* HomeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleFactory.swift; sourceTree = "<group>"; };
+		846E880E26B9890500F591EA /* HomeCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorOutput.swift; sourceTree = "<group>"; };
+		846E881126B989B200F591EA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		84B7A20726B82C9700DDEC63 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		84B7A20B26B82D3B00DDEC63 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		84B7A20E26B8312500DDEC63 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -100,6 +112,7 @@
 		8403EB1E26B6A70C00D11783 /* dStarSafeBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				846E87FF26B95B1300F591EA /* HomeFlow */,
 				84B7A20A26B82CF400DDEC63 /* AuthFlow */,
 				84391A6C26B748BA00BACB56 /* Parents */,
 				84391A6826B7482800BACB56 /* Application */,
@@ -108,7 +121,6 @@
 				8403EB4826B6CEEA00D11783 /* Factories */,
 				8403EB3D26B6CD0900D11783 /* Router */,
 				8403EB3826B6CA1400D11783 /* Protocols */,
-				8403EB2326B6A70C00D11783 /* ViewController.swift */,
 				8403EB2B26B6A70C00D11783 /* Assets.xcassets */,
 				8403EB2D26B6A70C00D11783 /* LaunchScreen.storyboard */,
 				8403EB3026B6A70C00D11783 /* Info.plist */,
@@ -142,6 +154,7 @@
 				8403EB4C26B6CF9B00D11783 /* Imp */,
 				8403EB4926B6CF4C00D11783 /* CoordinatorFactory.swift */,
 				84B7A21426B8322B00DDEC63 /* AuthModuleFactory.swift */,
+				846E880B26B981F400F591EA /* HomeModuleFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 				8403EB5626B6D17500D11783 /* StoryboardsEnum.swift */,
 				8403EB2526B6A70C00D11783 /* Main.storyboard */,
 				84B7A20726B82C9700DDEC63 /* Auth.storyboard */,
+				846E87FB26B95A8900F591EA /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -190,6 +204,26 @@
 				84391A6D26B748DC00BACB56 /* BaseCoordinator.swift */,
 			);
 			path = Parents;
+			sourceTree = "<group>";
+		};
+		846E87FF26B95B1300F591EA /* HomeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				846E880026B95B2700F591EA /* Controllers */,
+				846E880E26B9890500F591EA /* HomeCoordinatorOutput.swift */,
+				846E881126B989B200F591EA /* HomeCoordinator.swift */,
+			);
+			path = HomeFlow;
+			sourceTree = "<group>";
+		};
+		846E880026B95B2700F591EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				846E880126B95B6A00F591EA /* HomeViewController.swift */,
+				846E880426B95BF300F591EA /* HomeView.swift */,
+				846E880826B96FEF00F591EA /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		84B7A20A26B82CF400DDEC63 /* AuthFlow */ = {
@@ -271,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B7A20826B82C9700DDEC63 /* Auth.storyboard in Resources */,
+				846E87FC26B95A8900F591EA /* Home.storyboard in Resources */,
 				8403EB2F26B6A70C00D11783 /* LaunchScreen.storyboard in Resources */,
 				8403EB2C26B6A70C00D11783 /* Assets.xcassets in Resources */,
 				8403EB2726B6A70C00D11783 /* Main.storyboard in Resources */,
@@ -287,15 +322,18 @@
 				8403EB2A26B6A70C00D11783 /* dStarSafeBoxDemo.xcdatamodeld in Sources */,
 				8403EB5726B6D17500D11783 /* StoryboardsEnum.swift in Sources */,
 				8403EB4626B6CE6800D11783 /* RouterImp.swift in Sources */,
-				8403EB2426B6A70C00D11783 /* ViewController.swift in Sources */,
+				846E880526B95BF300F591EA /* HomeView.swift in Sources */,
+				846E881226B989B200F591EA /* HomeCoordinator.swift in Sources */,
 				84B7A20F26B8312500DDEC63 /* AuthCoordinator.swift in Sources */,
 				84B7A22826B84E9500DDEC63 /* SignUpView.swift in Sources */,
+				846E880926B96FEF00F591EA /* CategoriesCollectionViewCell.swift in Sources */,
 				84B7A20C26B82D3B00DDEC63 /* AuthViewController.swift in Sources */,
 				84B7A21926B832C000DDEC63 /* AuthView.swift in Sources */,
 				8403EB3A26B6CAA900D11783 /* Coordinator.swift in Sources */,
 				8403EB4326B6CE0700D11783 /* Router.swift in Sources */,
 				84B7A22026B84A9D00DDEC63 /* BaseView.swift in Sources */,
 				8403EB2026B6A70C00D11783 /* AppDelegate.swift in Sources */,
+				846E880226B95B6A00F591EA /* HomeViewController.swift in Sources */,
 				8403EB4A26B6CF4C00D11783 /* CoordinatorFactory.swift in Sources */,
 				84B7A22B26B8582500DDEC63 /* AuthCoordinatorOutput.swift in Sources */,
 				8403EB2226B6A70C00D11783 /* SceneDelegate.swift in Sources */,
@@ -305,6 +343,8 @@
 				84B7A21D26B83C2200DDEC63 /* SignUpViewController.swift in Sources */,
 				84B7A21226B831DF00DDEC63 /* ModuleFactoryImp.swift in Sources */,
 				8403EB4E26B6CFB500D11783 /* CoordinatorFactoryImp.swift in Sources */,
+				846E880C26B981F400F591EA /* HomeModuleFactory.swift in Sources */,
+				846E880F26B9890500F591EA /* HomeCoordinatorOutput.swift in Sources */,
 				8403EB5326B6D09600D11783 /* UIViewControllerExtension.swift in Sources */,
 				8403EB3F26B6CD5300D11783 /* Presentable.swift in Sources */,
 				84391A6A26B7487900BACB56 /* ApplicationCoordinator.swift in Sources */,

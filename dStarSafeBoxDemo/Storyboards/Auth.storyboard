@@ -34,6 +34,9 @@
                                 <rect key="frame" x="176" y="676" width="62" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Accept"/>
+                                <connections>
+                                    <action selector="acceptButtonTaped:" destination="cbv-xh-H0e" eventType="touchUpInside" id="7zI-OU-Uee"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xod-sR-ixR"/>
@@ -90,7 +93,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="elT-VY-KgY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="95I-47-jWp" firstAttribute="centerX" secondItem="elT-VY-KgY" secondAttribute="centerX" id="57v-gP-1yB"/>
                             <constraint firstItem="8xy-0B-U4L" firstAttribute="centerX" secondItem="elT-VY-KgY" secondAttribute="centerX" id="CFC-XZ-2pX"/>
@@ -115,9 +118,6 @@
     <resources>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -6,15 +6,19 @@
 //
 
 final class ModuleFactoryImp:
-  AuthModuleFactory {
+    AuthModuleFactory, HomeModuleFactory {
   
-  func makeAuthView() -> AuthView {
-    return AuthViewController.controllerFromStoryboard(.auth)
-  }
-//
-  func makeSignUpView() -> SignUpView {
-    return SignUpViewController.controllerFromStoryboard(.auth)
-  }
+    func makeAuthView() -> AuthView {
+        return AuthViewController.controllerFromStoryboard(.auth)
+    }
+    
+    func makeSignUpView() -> SignUpView {
+        return SignUpViewController.controllerFromStoryboard(.auth)
+    }
+    
+    func makeHomeView() -> HomeView {
+        return HomeViewController.controllerFromStoryboard(.home)
+    }
 //
 //  func makeOnboardingModule() -> OnboardingView {
 //    return OnboardingController.controllerFromStoryboard(.onboarding)

@@ -20,6 +20,11 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     let coordinator = AuthCoordinator(router: router, factory: ModuleFactoryImp())
     return coordinator
   }
+
+    func makeHomeCoordinator(router: Router) -> Coordinator & HomeCoordinatorOutput {
+        let coordinator = HomeCoordinator(router: router, factory: ModuleFactoryImp())
+        return coordinator
+    }
 //
 //  func makeItemCoordinator() -> Coordinator {
 //    return makeItemCoordinator(navController: nil)
