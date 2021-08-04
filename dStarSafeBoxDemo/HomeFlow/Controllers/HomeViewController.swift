@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var openActivityFlow: (() -> Void)?
+    let model = ItemsModel(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+    var viewPresenter: ItemsViewPresenter?
     
     @IBOutlet weak var accountTableView: UITableView!
     @IBOutlet weak var categoriesColectionView: UICollectionView!
@@ -28,6 +30,8 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
         //accountTableView.separatorStyle = .none
         categoriesColectionView.delegate = self
         categoriesColectionView.dataSource = self
+        
+        viewPresenter = ItemsViewPresenter(model: model, view: self)
     }
     
     // MARK: - lifecycle tableView metods
@@ -78,15 +82,10 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
         var cell: CategoriesCollectionViewCell
         
         cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoriesCell", for: indexPath) as! CategoriesCollectionViewCell
-        switch indexPath.row {
-        case 0:
-            cell.configure(with: "Finance")
-        case 1:
-            cell.configure(with: "Corporate")
-        case 2:
-            cell.configure(with: "ID Documents")
-        default:
-            cell.configure(with: "Other")
+        if let category = viewPresenter?.model.topCategories[indexPath.row], let categoryName = category.name {
+            cell.configure(with: categoryName)
+        } else {
+            cell.configure(with: "Error: Empty base")
         }
         return cell
 
