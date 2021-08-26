@@ -26,6 +26,7 @@
 		84391A6626B7479200BACB56 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6526B7479200BACB56 /* NSObjectExtensions.swift */; };
 		84391A6A26B7487900BACB56 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6926B7487900BACB56 /* ApplicationCoordinator.swift */; };
 		84391A6E26B748DC00BACB56 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391A6D26B748DC00BACB56 /* BaseCoordinator.swift */; };
+		8446A74D26BBE85D002CEA72 /* SubCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A74C26BBE85D002CEA72 /* SubCategoriesTableViewController.swift */; };
 		846E87FC26B95A8900F591EA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E87FB26B95A8900F591EA /* Home.storyboard */; };
 		846E880226B95B6A00F591EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880126B95B6A00F591EA /* HomeViewController.swift */; };
 		846E880526B95BF300F591EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E880426B95BF300F591EA /* HomeView.swift */; };
@@ -67,6 +68,7 @@
 		84391A6526B7479200BACB56 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		84391A6926B7487900BACB56 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		84391A6D26B748DC00BACB56 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		8446A74C26BBE85D002CEA72 /* SubCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesTableViewController.swift; sourceTree = "<group>"; };
 		846E87FB26B95A8900F591EA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		846E880126B95B6A00F591EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		846E880426B95BF300F591EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				846E880126B95B6A00F591EA /* HomeViewController.swift */,
 				846E880426B95BF300F591EA /* HomeView.swift */,
 				846E880826B96FEF00F591EA /* CategoriesCollectionViewCell.swift */,
+				8446A74C26BBE85D002CEA72 /* SubCategoriesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				84391A6E26B748DC00BACB56 /* BaseCoordinator.swift in Sources */,
 				84B7A21526B8322B00DDEC63 /* AuthModuleFactory.swift in Sources */,
 				84B7A21D26B83C2200DDEC63 /* SignUpViewController.swift in Sources */,
+				8446A74D26BBE85D002CEA72 /* SubCategoriesTableViewController.swift in Sources */,
 				84B7A21226B831DF00DDEC63 /* ModuleFactoryImp.swift in Sources */,
 				8403EB4E26B6CFB500D11783 /* CoordinatorFactoryImp.swift in Sources */,
 				846E880C26B981F400F591EA /* HomeModuleFactory.swift in Sources */,

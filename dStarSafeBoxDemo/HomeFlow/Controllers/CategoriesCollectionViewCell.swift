@@ -12,7 +12,6 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     func configure(with title: String) {
-        //avatarImageView.image = UIImage(data: pattern.avatar)
         titleLabel.text = title
     }
 

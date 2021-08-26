@@ -40,7 +40,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xod-sR-ixR"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="Iwl-MX-njO" firstAttribute="centerX" secondItem="xod-sR-ixR" secondAttribute="centerX" id="0Hp-2d-HZg"/>
                             <constraint firstItem="B21-Vn-LNZ" firstAttribute="top" secondItem="xod-sR-ixR" secondAttribute="top" constant="40" id="EEw-OO-NII"/>
@@ -93,7 +93,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="elT-VY-KgY"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="95I-47-jWp" firstAttribute="centerX" secondItem="elT-VY-KgY" secondAttribute="centerX" id="57v-gP-1yB"/>
                             <constraint firstItem="8xy-0B-U4L" firstAttribute="centerX" secondItem="elT-VY-KgY" secondAttribute="centerX" id="CFC-XZ-2pX"/>
@@ -116,8 +116,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,5 +6,6 @@
 //
 
 protocol HomeModuleFactory {
-  func makeHomeView() -> HomeView
+    func makeHomeView() -> HomeView
+    func makeSubCategoriesView() -> HomeView
 }

@@ -15,9 +15,9 @@ class SignUpViewController: UIViewController, SignUpView {
     @IBOutlet weak var SecondPwdTextField: UITextField!
     
     override func viewDidLoad() {
+        navigationController?.navigationBar.barTintColor = UIColor.systemGray5
+        navigationController?.navigationBar.isTranslucent = false
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }

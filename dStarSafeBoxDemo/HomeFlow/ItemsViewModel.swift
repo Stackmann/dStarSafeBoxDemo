@@ -10,9 +10,20 @@ import Foundation
 class ItemsViewPresenter {
     let model: ItemsModel
     weak var view: HomeView?
+    var topCategories = [Categories]()
+    var subCategories = [Categories]()
     
     init(model: ItemsModel, view: HomeView) {
         self.model = model
         self.view = view
+        reloadTopCategories()
+    }
+    
+    func reloadTopCategories() {
+        topCategories = model.getTopCategories()
+    }
+
+    func updateSubCategories(with category: Categories) {
+        subCategories = model.getSubCategories(with: category)
     }
 }

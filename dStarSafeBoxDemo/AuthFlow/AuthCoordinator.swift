@@ -11,7 +11,6 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
     
     private let factory: AuthModuleFactory
     private let router: Router
-    //private weak var signUpView: SignUpView?
     private var isFirstAuth: Bool {
         isItFirstAuth()
     }
@@ -51,25 +50,8 @@ final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
     }
     
     private func showRestoreView() {
-        //        signUpView = factory.makeSignUpHandler()
-        //        signUpView?.onSignUpComplete = { [weak self] in
-        //            self?.finishFlow?()
-        //        }
-        //        signUpView?.onTermsButtonTap = { [weak self] in
-        //            self?.showTerms()
-        //        }
-        //        router.push(signUpView)
+        //call restore view
     }
-    
-//    private func showTerms() {
-//        let termsOutput = factory.makeTermsOutput()
-//        termsOutput.confirmed = self.signUpView?.confirmed ?? false
-//        
-//        termsOutput.onConfirmChanged = { [weak self] confirmed in
-//            self?.signUpView?.conformTermsAgreement(confirmed)
-//        }
-//        router.push(termsOutput, animated: true)
-//    }
     
     private func isItFirstAuth() -> Bool {
         return false

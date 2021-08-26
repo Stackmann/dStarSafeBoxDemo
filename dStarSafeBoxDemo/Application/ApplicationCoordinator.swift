@@ -18,8 +18,6 @@ fileprivate enum LaunchInstructor {
     switch (tutorialWasShown, isAutorized) {
       case (true, false), (false, false): return .auth
     default: return .main
-//      case (false, true): return .onboarding
-//      case (true, true): return .main
     }
   }
 }

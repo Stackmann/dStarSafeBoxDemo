@@ -8,5 +8,4 @@
 protocol AuthModuleFactory {
   func makeAuthView() -> AuthView
   func makeSignUpView() -> SignUpView
-  //func makeTermsOutput() -> TermsView
 }

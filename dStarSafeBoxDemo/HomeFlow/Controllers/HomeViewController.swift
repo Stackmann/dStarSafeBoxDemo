@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var openActivityFlow: (() -> Void)?
-    let model = ItemsModel(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+    var onCategoryTap: ((ItemsViewPresenter?, IndexPath) -> Void)?
     var viewPresenter: ItemsViewPresenter?
     
     @IBOutlet weak var accountTableView: UITableView!
@@ -22,16 +22,10 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        accountTableView.delegate = self
-        accountTableView.dataSource = self
-        accountTableView.tableFooterView = UIView()
-        //accountTableView.backgroundColor = UIColor.mainGrey
-        //accountTableView.separatorStyle = .none
-        categoriesColectionView.delegate = self
-        categoriesColectionView.dataSource = self
-        
-        viewPresenter = ItemsViewPresenter(model: model, view: self)
+        navigationController?.navigationBar.barTintColor = UIColor.systemGray5
+        navigationController?.navigationBar.isTranslucent = false
+        setupTableview()
+        setupCollectionView()
     }
     
     // MARK: - lifecycle tableView metods
@@ -45,7 +39,6 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
         
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: "accountRow1Cell", for: indexPath)
-            //cell.backgroundColor = UIColor.mainGrey
             cell.selectionStyle = .none
             cell.textLabel?.text = "Sophie Waterford"
             cell.detailTextLabel?.text = "Business account"
@@ -56,20 +49,6 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
             cell.detailTextLabel?.text = "Company Name"
         }
         return cell
-
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        for i in 0...cellsCount-1 {
-//            if let cell = tableViewKindAdding.cellForRow(at: IndexPath(row: i, section: 0)) {
-//                cell.accessoryType = (i == indexPath.row ? .checkmark : .none)
-//                if i == 0 && cell.accessoryType == .checkmark || i == 1 && cell.accessoryType == .none {
-//                    viewModel.appendRecords = true
-//                } else {
-//                    viewModel.appendRecords = false
-//                }
-//            }
-//        }
     }
 
     // MARK: - lifecycle collectionView metods
@@ -82,13 +61,53 @@ class HomeViewController: UIViewController, HomeView, UITableViewDelegate, UITab
         var cell: CategoriesCollectionViewCell
         
         cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoriesCell", for: indexPath) as! CategoriesCollectionViewCell
-        if let category = viewPresenter?.model.topCategories[indexPath.row], let categoryName = category.name {
-            cell.configure(with: categoryName)
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+
+        if let presenter = viewPresenter, presenter.topCategories.indices.contains(indexPath.row) {
+            let category = presenter.topCategories[indexPath.row]
+            if let categoryName = category.name { cell.configure(with: categoryName) }
         } else {
             cell.configure(with: "Error: Empty base")
         }
         return cell
 
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onCategoryTap?(viewPresenter, indexPath)
+    }
 
+    @IBAction func addCategoriesByDefaultButtonPressed(_ sender: UIButton) {
+        viewPresenter?.model.addCategoriesByDefault()
+    }
+    
+    // MARK: - own metods
+    
+    func setupTableview() {
+        accountTableView.delegate = self
+        accountTableView.dataSource = self
+        accountTableView.tableFooterView = UIView()
+
+        accountTableView.layer.borderColor = UIColor.gray.cgColor
+        accountTableView.layer.borderWidth = 1.0
+
+        accountTableView.layer.cornerRadius = 10
+        accountTableView.layer.masksToBounds = true
+
+        let containerView:UIView = UIView(frame:accountTableView.frame)
+        containerView.backgroundColor = UIColor.clear
+        containerView.layer.shadowColor = UIColor.lightGray.cgColor
+        containerView.layer.shadowOffset = CGSize(width: 10, height: 10) //Right-Bottom
+        containerView.layer.shadowOpacity = 1.0
+        containerView.layer.shadowRadius = 2
+        self.view.addSubview(containerView)
+        containerView.addSubview(accountTableView)
+        
+    }
+    
+    func setupCollectionView() {
+        categoriesColectionView.delegate = self
+        categoriesColectionView.dataSource = self
+    }
 }
