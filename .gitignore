@@ -23,6 +23,7 @@ Configurations/DefaultConfiguration.xcconfig
 *.xccheckout
 *.xcscmblueprint
 vendor
+.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
