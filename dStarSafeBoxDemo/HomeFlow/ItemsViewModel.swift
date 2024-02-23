@@ -13,6 +13,8 @@ class ItemsViewPresenter {
     var topCategories = [Categories]()
     var subCategories = [Categories]()
     
+    var newStrVariable1: String?
+    
     init(model: ItemsModel, view: HomeView) {
         self.model = model
         self.view = view
